@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Heading.Large with text 1`] = `
+<h1
+  className="HeadingLarge_1y2mmy6"
+>
+  Hello, world!
+</h1>
+`;
+
+exports[`Storyshots Title with text 1`] = `
+<h1
+  className="Title_pg0x2d"
+>
+  Hello, world!
+</h1>
+`;
