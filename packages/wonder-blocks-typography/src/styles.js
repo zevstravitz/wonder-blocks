@@ -33,6 +33,12 @@ const styles = StyleSheet.create({
             lineHeight: "26px",
         },
     },
+    LabelLarge: {
+        fontFamily: "Lato",
+        fontWeight: Bold,
+        fontSize: 16,
+        lineHeight: "20px",
+    },
 });
 
 export {styles as default};
