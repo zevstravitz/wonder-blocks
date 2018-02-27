@@ -1,8 +1,8 @@
 import { configure } from '@storybook/react';
 
 function loadStories() {
-    require("../packages/wonder-blocks-typography/stories.js");
-    // You can require as many stories as you need.
+    const req = require.context('../', true, /\/stories\.js$/);
+    req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
