@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: "row",
         width: "100%",
+        position: "unset", // hack for report
     },
 
     rowMaxWidth: {
