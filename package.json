@@ -8,7 +8,7 @@
     "clean": "rm -rf packages/wonder-blocks-*/dist && rm -rf packages/wonder-blocks-*/node_modules",
     "lint": "eslint --config ./eslint/eslintrc packages",
     "lint:watch": "esw --watch --config ./eslint/eslintrc packages",
-    "build:all": "webpack && node utils/package-flow-types.js",
+    "build:all": "webpack --display-modules && node utils/package-flow-types.js",
     "watch:all": "webpack -w",
     "flow": "flow",
     "flow-coverage": "flow-coverage-report -t text -t html -f ./node_modules/.bin/flow -i 'packages/wonder-blocks-*/**/*.js' -x 'packages/wonder-blocks-*/dist/*.js' -x '**/*.test.js' -x '**/node_modules/**/*.js'",
@@ -25,7 +25,8 @@
     "build:styleguidist": "yarn run gen-styleguide-prod-config && styleguidist build --config styleguide.prod.config.js",
     "git-add-snapshot-tests": "git add packages/*/generated-snapshot.test.js",
     "pretty-quick": "pretty-quick --staged",
-    "publish": "git diff --stat --exit-code HEAD && yarn build:all && lerna publish"
+    "publish": "node utils/pre-publish-check.js && git diff --stat --exit-code HEAD && yarn build:all && lerna publish",
+    "dry-run-publish": "yarn run publish --no-npm --no-git"
   },
   "author": "",
   "license": "MIT",
@@ -80,9 +81,12 @@
   },
   "dependencies": {
     "aphrodite": "^1.2.5",
+    "inquirer": "^6.0.0",
+    "popper.js": "^1.14.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-popper": "^1.0.0",
     "react-router-dom": "^4.2.2"
   },
   "workspaces": [

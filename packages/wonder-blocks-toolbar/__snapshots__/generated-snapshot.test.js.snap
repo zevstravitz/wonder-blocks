@@ -144,7 +144,7 @@ exports[`wonder-blocks-toolbar example 1 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -177,10 +177,7 @@ exports[`wonder-blocks-toolbar example 1 1`] = `
                 "MozOsxFontSmoothing": "grayscale",
                 "WebkitFontSmoothing": "antialiased",
                 "display": "block",
-                "fontFamily": Array [
-                  "Lato",
-                  "sans-serif",
-                ],
+                "fontFamily": "Lato, sans-serif",
                 "fontSize": 14,
                 "fontWeight": "bold",
                 "lineHeight": "18px",
@@ -229,7 +226,7 @@ exports[`wonder-blocks-toolbar example 1 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -265,10 +262,7 @@ exports[`wonder-blocks-toolbar example 1 1`] = `
                 "MozOsxFontSmoothing": "grayscale",
                 "WebkitFontSmoothing": "antialiased",
                 "display": "block",
-                "fontFamily": Array [
-                  "Lato",
-                  "sans-serif",
-                ],
+                "fontFamily": "Lato, sans-serif",
                 "fontSize": 14,
                 "fontWeight": "bold",
                 "lineHeight": "18px",
@@ -387,7 +381,7 @@ exports[`wonder-blocks-toolbar example 2 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -482,10 +476,7 @@ exports[`wonder-blocks-toolbar example 2 1`] = `
             "MozOsxFontSmoothing": "grayscale",
             "WebkitFontSmoothing": "antialiased",
             "display": "block",
-            "fontFamily": Array [
-              "Lato",
-              "sans-serif",
-            ],
+            "fontFamily": "Lato, sans-serif",
             "fontSize": 20,
             "fontWeight": 700,
             "lineHeight": "24px",
@@ -645,7 +636,7 @@ exports[`wonder-blocks-toolbar example 3 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -740,10 +731,7 @@ exports[`wonder-blocks-toolbar example 3 1`] = `
             "MozOsxFontSmoothing": "grayscale",
             "WebkitFontSmoothing": "antialiased",
             "display": "block",
-            "fontFamily": Array [
-              "Lato",
-              "sans-serif",
-            ],
+            "fontFamily": "Lato, sans-serif",
             "fontSize": 20,
             "fontWeight": 700,
             "lineHeight": "24px",
@@ -834,7 +822,7 @@ exports[`wonder-blocks-toolbar example 3 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -866,10 +854,7 @@ exports[`wonder-blocks-toolbar example 3 1`] = `
                 "MozOsxFontSmoothing": "grayscale",
                 "WebkitFontSmoothing": "antialiased",
                 "display": "block",
-                "fontFamily": Array [
-                  "Lato",
-                  "sans-serif",
-                ],
+                "fontFamily": "Lato, sans-serif",
                 "fontSize": 16,
                 "fontWeight": "bold",
                 "lineHeight": "20px",
@@ -1020,10 +1005,7 @@ exports[`wonder-blocks-toolbar example 4 1`] = `
               "MozOsxFontSmoothing": "grayscale",
               "WebkitFontSmoothing": "antialiased",
               "display": "block",
-              "fontFamily": Array [
-                "Lato",
-                "sans-serif",
-              ],
+              "fontFamily": "Lato, sans-serif",
               "fontSize": 16,
               "fontWeight": 700,
               "lineHeight": "20px",
@@ -1070,7 +1052,7 @@ exports[`wonder-blocks-toolbar example 4 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -1106,10 +1088,7 @@ exports[`wonder-blocks-toolbar example 4 1`] = `
                 "MozOsxFontSmoothing": "grayscale",
                 "WebkitFontSmoothing": "antialiased",
                 "display": "block",
-                "fontFamily": Array [
-                  "Lato",
-                  "sans-serif",
-                ],
+                "fontFamily": "Lato, sans-serif",
                 "fontSize": 16,
                 "fontWeight": "bold",
                 "lineHeight": "20px",
@@ -1158,7 +1137,7 @@ exports[`wonder-blocks-toolbar example 4 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -1191,10 +1170,7 @@ exports[`wonder-blocks-toolbar example 4 1`] = `
                 "MozOsxFontSmoothing": "grayscale",
                 "WebkitFontSmoothing": "antialiased",
                 "display": "block",
-                "fontFamily": Array [
-                  "Lato",
-                  "sans-serif",
-                ],
+                "fontFamily": "Lato, sans-serif",
                 "fontSize": 16,
                 "fontWeight": "bold",
                 "lineHeight": "20px",
@@ -1313,7 +1289,7 @@ exports[`wonder-blocks-toolbar example 5 1`] = `
           onTouchStart={[Function]}
           style={
             Object {
-              "::-moz-focus-inner": Object {
+              "::MozFocusInner": Object {
                 "border": 0,
               },
               "alignItems": "center",
@@ -1408,10 +1384,7 @@ exports[`wonder-blocks-toolbar example 5 1`] = `
             "MozOsxFontSmoothing": "grayscale",
             "WebkitFontSmoothing": "antialiased",
             "display": "block",
-            "fontFamily": Array [
-              "Lato",
-              "sans-serif",
-            ],
+            "fontFamily": "Lato, sans-serif",
             "fontSize": 16,
             "fontWeight": 700,
             "lineHeight": "20px",
@@ -1428,10 +1401,7 @@ exports[`wonder-blocks-toolbar example 5 1`] = `
             "WebkitFontSmoothing": "antialiased",
             "color": "rgba(33, 36, 44, 0.64)",
             "display": "block",
-            "fontFamily": Array [
-              "Lato",
-              "sans-serif",
-            ],
+            "fontFamily": "Lato, sans-serif",
             "fontSize": 14,
             "fontWeight": 400,
             "lineHeight": "18px",
@@ -1538,10 +1508,7 @@ exports[`wonder-blocks-toolbar example 5 1`] = `
                 "MozOsxFontSmoothing": "grayscale",
                 "WebkitFontSmoothing": "antialiased",
                 "display": "block",
-                "fontFamily": Array [
-                  "Lato",
-                  "sans-serif",
-                ],
+                "fontFamily": "Lato, sans-serif",
                 "fontSize": 16,
                 "fontWeight": 700,
                 "lineHeight": "20px",
@@ -1700,10 +1667,7 @@ exports[`wonder-blocks-toolbar example 6 1`] = `
               "MozOsxFontSmoothing": "grayscale",
               "WebkitFontSmoothing": "antialiased",
               "display": "block",
-              "fontFamily": Array [
-                "Lato",
-                "sans-serif",
-              ],
+              "fontFamily": "Lato, sans-serif",
               "fontSize": 20,
               "fontWeight": 700,
               "lineHeight": "24px",

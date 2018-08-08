@@ -1,10 +1,9 @@
 // @flow
-// For menu items that trigger an action, such as going to a new page or
-// opening a modal.
 
 import * as React from "react";
 import {StyleSheet} from "aphrodite";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Color, {mix, fade} from "@khanacademy/wonder-blocks-color";
 import Spacing from "@khanacademy/wonder-blocks-spacing";
@@ -19,21 +18,14 @@ const {blue, white, offBlack, offBlack32} = Color;
 
 type ActionProps = {|
     /**
-     * Display text of the menu item.
+     * Display text of the action item.
      */
     label: string,
 
     /**
-     * Whether this menu item is disabled. A disabled item may not be selected.
+     * Whether this action item is disabled.
      */
     disabled: boolean,
-
-    /**
-     * Whether this item should be indented to have menu items left-align in
-     * text when an ActionItem is used in the same menu as items that have
-     * checks or checkboxes.
-     */
-    indent?: boolean,
 
     /**
      * URL to navigate to.
@@ -43,17 +35,18 @@ type ActionProps = {|
     href?: string,
 
     /**
-     * Whether to use client-side navigation.
+     * Whether to avoid using client-side navigation.
      *
      * If the URL passed to href is local to the client-side, e.g.
-     * /math/algebra/eval-exprs, then it uses react-router-dom's Link
-     * component which handles the client-side navigation.
+     * /math/algebra/eval-exprs, then it tries to use react-router-dom's Link
+     * component which handles the client-side navigation. You can set
+     * `skipClientNav` to true avoid using client-side nav entirely.
      *
      * NOTE: All URLs containing a protocol are considered external, e.g.
      * https://khanacademy.org/math/algebra/eval-exprs will trigger a full
      * page reload.
      */
-    clientNav?: boolean,
+    skipClientNav?: boolean,
 
     /**
      * Function to call when button is clicked.
@@ -68,17 +61,31 @@ type ActionProps = {|
      * href is not
      */
     onClick?: () => void,
+
+    /**
+     * Whether this item should be indented to have menu items left-align in
+     * text when an ActionItem is used in the same menu as items that have
+     * checks or checkboxes. Auto-populated by menu.
+     * @ignore
+     */
+    indent: boolean,
 |};
 
 const StyledAnchor = addStyle("a");
 const StyledButton = addStyle("button");
 const StyledLink = addStyle(Link);
 
+/**
+ * The action item trigger actions, such as navigating to a different page or
+ * opening a modal. Supply the href and/or onClick props.
+ */
 export default class ActionItem extends React.Component<ActionProps> {
     static defaultProps = {
         disabled: false,
         indent: false,
     };
+
+    static contextTypes = {router: PropTypes.any};
 
     handleClick = (e: SyntheticEvent<>) => {
         if (this.props.disabled) {
@@ -87,12 +94,20 @@ export default class ActionItem extends React.Component<ActionProps> {
     };
 
     render() {
-        const {clientNav, disabled, href, indent, label, onClick} = this.props;
+        const {
+            skipClientNav,
+            disabled,
+            href,
+            indent,
+            label,
+            onClick,
+        } = this.props;
+        const {router} = this.context;
 
         const ClickableBehavior = getClickableBehavior(
             href,
-            clientNav,
-            this.context.router,
+            skipClientNav,
+            router,
         );
 
         return (
@@ -123,16 +138,14 @@ export default class ActionItem extends React.Component<ActionProps> {
                     const children = (
                         <React.Fragment>
                             {indent && <View style={{width: Spacing.medium}} />}
-                            <LabelLarge style={[styles.label]}>
+                            <LabelLarge style={styles.label}>
                                 {label}
                             </LabelLarge>
                         </React.Fragment>
                     );
 
-                    const {href, clientNav} = this.props;
-
                     if (href) {
-                        return clientNav ? (
+                        return router && !skipClientNav ? (
                             <StyledLink
                                 {...props}
                                 onClick={this.handleClick}
@@ -166,7 +179,6 @@ const styles = StyleSheet.create({
     shared: {
         background: white,
         color: offBlack,
-        cursor: "pointer",
         textDecoration: "none",
         border: "none",
         outline: "none",
@@ -174,6 +186,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         display: "flex",
         height: 40,
+        minHeight: 40,
         paddingLeft: Spacing.medium,
         paddingRight: Spacing.medium,
     },
