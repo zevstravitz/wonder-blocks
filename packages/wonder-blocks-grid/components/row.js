@@ -95,12 +95,13 @@ class Row extends React.Component<{
         let hasVisibleCell = false;
 
         for (const item of contents) {
+            const itemType = item.type && (item.type.wrappedType || item.type);
             if (
-                !item.type ||
+                !itemType ||
                 !item.props ||
-                !item.type.shouldDisplay ||
-                (typeof item.type.shouldDisplay === "function" &&
-                    item.type.shouldDisplay(item.props, mediaSize))
+                !itemType.shouldDisplay ||
+                (typeof itemType.shouldDisplay === "function" &&
+                    itemType.shouldDisplay(item.props, mediaSize))
             ) {
                 if (hasVisibleCell) {
                     filteredContents.push(

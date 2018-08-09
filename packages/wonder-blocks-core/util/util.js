@@ -119,6 +119,7 @@ export function MediaLayoutWrapper<Props: {}>(
         );
     };
 
+    WrappedComponent.wrappedType = Component;
     WrappedComponent.contextTypes = mediaContextTypes;
 
     return WrappedComponent;
