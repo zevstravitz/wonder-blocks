@@ -87,6 +87,9 @@ describe("Dropdown", () => {
         expect(dropdown.instance().focusedIndex).toBe(2);
     });
 
+    // TODO(jared): This test doesn't properly fail -- make sure that it
+    // fails without https://github.com/Khan/wonder-blocks/pull/334
+    // once we're on selenium.
     it("doesn't close on touch interaction with option", () => {
         const handleOpen = jest.fn();
         dropdown.setProps({
