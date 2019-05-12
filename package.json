@@ -107,5 +107,8 @@
     "test",
     "git-add-snapshot-tests",
     "pretty-quick"
-  ]
+  ],
+  "majestic": {
+    "args": ["--config=./config/jest/test.config.js"]
+  }
 }
