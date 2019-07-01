@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import addStyle from "../util/add-style.js";
 import getClickableBehavior from "../util/get-clickable-behavior.js";
 import type {ClickableRole, ClickableState} from "./clickable-behavior.js";
-import type {StyleType} from "../util/types.js";
+import type {StyleType, AriaProps} from "../util/types.js";
 
 type Props = {|
     "aria-label": string,
@@ -15,9 +15,13 @@ type Props = {|
     href?: string,
     onClick?: (e: SyntheticEvent<>) => mixed,
     role?: ClickableRole,
+    to?: mixed,
     skipClientNav?: boolean,
     style?: StyleType,
     testId?: string,
+    "data-test-id"?: string,
+    handlers: mixed,
+    ...$Rest<AriaProps, {|"aria-disabled": "true" | "false" | void|}>,
 |};
 
 const StyledAnchor = addStyle<"a">("a");
@@ -33,6 +37,7 @@ export default class Clickable extends React.Component<Props> {
     render() {
         const {router} = this.context;
         const {
+            // eslint-disable-next-line no-unused-vars
             "aria-label": ariaLabel, // eslint-disable-line react/prop-types
             children,
             disabled,
@@ -40,8 +45,12 @@ export default class Clickable extends React.Component<Props> {
             onClick,
             role,
             skipClientNav,
+            // eslint-disable-next-line no-unused-vars
             style,
+            // eslint-disable-next-line no-unused-vars
             testId,
+            // eslint-disable-next-line no-unused-vars
+            ...handlers
         } = this.props;
 
         const ClickableBehavior = getClickableBehavior(
@@ -55,33 +64,30 @@ export default class Clickable extends React.Component<Props> {
                 disabled={disabled}
                 href={href}
                 onClick={onClick}
-                role={role}
             >
                 {(state, handlers) => {
-                    const commonProps = {
-                        "aria-label": ariaLabel,
-                        "data-test-id": testId,
-                        role: role,
-                        style: [styles.reset, style],
-                        ...handlers,
-                    };
-
                     const content = children(state);
-
-                    if (href && !disabled) {
+                    if ((href || this.props.to) && !disabled) {
                         return router && !skipClientNav ? (
                             <StyledLink
-                                {...commonProps}
+                                {...this.props.handlers}
                                 to={href}
+                                aria-label={ariaLabel}
+                                data-test-id={testId}
+                                role={role}
+                                style={this.props.style}
                                 aria-disabled={disabled ? "true" : undefined}
                             >
                                 {content}
                             </StyledLink>
                         ) : (
                             <StyledAnchor
-                                {...commonProps}
+                                {...this.props.handlers}
                                 href={href}
-                                aria-disabled={disabled ? "true" : undefined}
+                                style={this.props.style}
+                                aria-label={ariaLabel}
+                                data-test-id={testId}
+                                role={role}
                             >
                                 {content}
                             </StyledAnchor>
@@ -90,8 +96,11 @@ export default class Clickable extends React.Component<Props> {
                         return (
                             <StyledButton
                                 type="button"
-                                {...commonProps}
-                                disabled={disabled}
+                                style={this.props.style}
+                                aria-label={ariaLabel}
+                                data-test-id={testId}
+                                role={role}
+                                {...this.props.handlers}
                             >
                                 {content}
                             </StyledButton>
@@ -103,6 +112,7 @@ export default class Clickable extends React.Component<Props> {
     }
 }
 
+// eslint-disable-next-line no-unused-vars
 const styles = StyleSheet.create({
     reset: {
         border: "none",

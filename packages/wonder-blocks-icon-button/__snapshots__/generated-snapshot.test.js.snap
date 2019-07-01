@@ -23,7 +23,6 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
   <button
     aria-label="search"
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -115,7 +114,6 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
   <button
     aria-label="search"
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -205,7 +203,7 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
     }
   />
   <a
-    aria-label="search"
+    aria-label=""
     className=""
     href="/search"
     onBlur={[Function]}
@@ -295,7 +293,6 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
   <button
     aria-label="search"
     className=""
-    disabled={true}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -384,10 +381,10 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
       }
     }
   />
-  <button
-    aria-label="search"
+  <a
+    aria-label=""
     className=""
-    disabled={true}
+    href="/search"
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -403,9 +400,6 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
     onTouchStart={[Function]}
     style={
       Object {
-        "::MozFocusInner": Object {
-          "border": 0,
-        },
         ":focus": Object {
           "WebkitTapHighlightColor": "rgba(0,0,0,0)",
         },
@@ -428,7 +422,6 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
       }
     }
     tabIndex={-1}
-    type="button"
   >
     <svg
       className=""
@@ -449,7 +442,7 @@ exports[`wonder-blocks-icon-button example 1 1`] = `
         fill="currentColor"
       />
     </svg>
-  </button>
+  </a>
 </div>
 `;
 
@@ -477,7 +470,6 @@ exports[`wonder-blocks-icon-button example 2 1`] = `
   <button
     aria-label="search"
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}

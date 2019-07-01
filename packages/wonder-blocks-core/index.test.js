@@ -11,6 +11,7 @@ describe("@khanacademy/wonder-blocks-core", () => {
         expect(Object.keys(result).sort()).toEqual(
             [
                 "ClickableBehavior",
+                "Clickable",
                 "Text",
                 "View",
                 "WithSSRPlaceholder",

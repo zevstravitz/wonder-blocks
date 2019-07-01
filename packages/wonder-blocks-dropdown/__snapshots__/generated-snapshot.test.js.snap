@@ -26,7 +26,6 @@ exports[`wonder-blocks-dropdown example 1 1`] = `
   <button
     aria-label="search"
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -2620,8 +2619,8 @@ exports[`wonder-blocks-dropdown example 19 1`] = `
   }
 >
   <button
+    aria-label=""
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}

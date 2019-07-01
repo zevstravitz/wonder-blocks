@@ -1,7 +1,6 @@
 // @flow
 import React from "react";
 import {StyleSheet} from "aphrodite";
-import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 
 import Color, {
@@ -9,7 +8,7 @@ import Color, {
     mix,
     fade,
 } from "@khanacademy/wonder-blocks-color";
-import {addStyle} from "@khanacademy/wonder-blocks-core";
+import {Clickable} from "@khanacademy/wonder-blocks-core";
 import type {
     ClickableHandlers,
     ClickableState,
@@ -31,20 +30,18 @@ type Props = {|
     href?: string,
 |};
 
-const StyledAnchor = addStyle("a");
-const StyledButton = addStyle("button");
-const StyledLink = addStyle(Link);
-
 export default class IconButtonCore extends React.Component<Props> {
     static contextTypes = {router: PropTypes.any};
 
     render() {
         const {
+            // eslint-disable-next-line no-unused-vars
             skipClientNav,
             color,
             disabled,
             focused,
             hovered,
+            // eslint-disable-next-line no-unused-vars
             href,
             icon,
             kind,
@@ -54,7 +51,6 @@ export default class IconButtonCore extends React.Component<Props> {
             testId,
             ...handlers
         } = this.props;
-        const {router} = this.context;
 
         const buttonColor =
             color === "destructive"
@@ -74,35 +70,18 @@ export default class IconButtonCore extends React.Component<Props> {
                     : (hovered || focused) && buttonStyles.focus),
         ];
 
-        const child = <Icon size="medium" color="currentColor" icon={icon} />;
-
-        const commonProps = {
-            "data-test-id": testId,
-            style: [defaultStyle, style],
-            ...handlers,
-        };
-
-        if (href && !disabled) {
-            return router && !skipClientNav ? (
-                <StyledLink {...commonProps} to={href}>
-                    {child}
-                </StyledLink>
-            ) : (
-                <StyledAnchor {...commonProps} href={href}>
-                    {child}
-                </StyledAnchor>
-            );
-        } else {
-            return (
-                <StyledButton
-                    type="button"
-                    {...commonProps}
-                    disabled={disabled}
-                >
-                    {child}
-                </StyledButton>
-            );
-        }
+        return (
+            <Clickable
+                href={href}
+                data-test-id={testId}
+                style={[defaultStyle, style]}
+                handlers={handlers}
+            >
+                {(eventState) => (
+                    <Icon size="medium" color="currentColor" icon={icon} />
+                )}
+            </Clickable>
+        );
     }
 }
 

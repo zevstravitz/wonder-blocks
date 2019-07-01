@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @flow
 import * as React from "react";
 import {StyleSheet} from "aphrodite";
@@ -10,7 +11,7 @@ import Color, {
     mix,
     fade,
 } from "@khanacademy/wonder-blocks-color";
-import {addStyle} from "@khanacademy/wonder-blocks-core";
+import {addStyle, Clickable} from "@khanacademy/wonder-blocks-core";
 import {CircularSpinner} from "@khanacademy/wonder-blocks-progress-spinner";
 import Icon from "@khanacademy/wonder-blocks-icon";
 import Spacing from "@khanacademy/wonder-blocks-spacing";
@@ -121,7 +122,19 @@ export default class ButtonCore extends React.Component<Props> {
             </React.Fragment>
         );
 
-        if (href && !disabled) {
+        return (
+            <Clickable
+                handlers={handlers}
+                to={href}
+                href={href}
+                role={"button"}
+                style={[defaultStyle, style]}
+            >
+                {(eventState) => contents}
+            </Clickable>
+        );
+
+        /*         if (href && !disabled) {
             return router && !skipClientNav ? (
                 <StyledLink {...commonProps} to={href}>
                     {contents}
@@ -141,7 +154,7 @@ export default class ButtonCore extends React.Component<Props> {
                     {contents}
                 </StyledButton>
             );
-        }
+        } */
     }
 }
 

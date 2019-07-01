@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 // @flow
 import React from "react";
 import {MemoryRouter, Route, Switch} from "react-router-dom";
@@ -29,7 +31,7 @@ describe("Button", () => {
         );
 
         // Act
-        const buttonWrapper = wrapper.find(`[data-test-id="button"]`).first();
+        const buttonWrapper = wrapper.find(Button).first();
         buttonWrapper.simulate("click", {button: 0});
 
         // Assert
@@ -54,14 +56,17 @@ describe("Button", () => {
         );
 
         // Act
-        const buttonWrapper = wrapper.find(`[data-test-id="button"]`).first();
+        const buttonWrapper = wrapper.find(Button).first();
         buttonWrapper.simulate("click", {button: 0});
 
         // Assert
         expect(wrapper.find("#foo").exists()).toBe(false);
     });
 
-    test("client-side navigation with `skipClientNav` set to `true` fails", () => {
+    test.only("client-side navigation with `skipClientNav` set to `true` fails", () => {
+        // eslint-disable-next-line no-console
+        console.log("buttonWrapper.debug()");
+
         // Arrange
         const wrapper = mount(
             <MemoryRouter>
@@ -80,7 +85,11 @@ describe("Button", () => {
 
         // Act
         const buttonWrapper = wrapper.find(`[data-test-id="button"]`).first();
-        buttonWrapper.simulate("click", {button: 0});
+        console.log(wrapper.debug());
+
+        // eslint-disable-next-line no-console
+
+        //  bhg buttonWrapper.simulate("click", {button: 0});
 
         // Assert
         expect(wrapper.find("#foo").exists()).toBe(false);

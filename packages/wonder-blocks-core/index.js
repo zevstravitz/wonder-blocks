@@ -7,6 +7,7 @@ import type {AriaProps, IIdentifierFactory, StyleType} from "./util/types.js";
 import type {Intersection} from "./util/get-element-intersection.js";
 
 export {default as ClickableBehavior} from "./components/clickable-behavior.js";
+export {default as Clickable} from "./components/clickable.js";
 export {default as Text} from "./components/text.js";
 export {default as View} from "./components/view.js";
 export {

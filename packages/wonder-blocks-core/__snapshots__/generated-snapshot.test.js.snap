@@ -23,45 +23,14 @@ exports[`wonder-blocks-core example 1 1`] = `
   <button
     aria-label=""
     className=""
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragStart={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchCancel={[Function]}
-    onTouchEnd={[Function]}
-    onTouchStart={[Function]}
     style={
       Object {
         "::MozFocusInner": Object {
           "border": 0,
         },
-        "MozOsxFontSmoothing": "inherit",
-        "WebkitAppearance": "none",
-        "WebkitFontSmoothing": "inherit",
-        "background": "transparent",
-        "border": "none",
-        "boxSizing": "border-box",
-        "color": "inherit",
-        "font": "inherit",
-        "lineHeight": "normal",
         "margin": 0,
-        "outline": "none",
-        "overflow": "visible",
-        "padding": 0,
-        "textDecoration": "none",
-        "touchAction": "manipulation",
-        "userSelect": "none",
-        "width": "auto",
       }
     }
-    tabIndex={0}
     type="button"
   >
     <div
@@ -490,8 +459,8 @@ exports[`wonder-blocks-core example 7 1`] = `
     }
   >
     <button
+      aria-label=""
       className=""
-      disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
       onDragStart={[Function]}

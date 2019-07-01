@@ -142,8 +142,8 @@ exports[`wonder-blocks-tooltip example 3 1`] = `
 
 exports[`wonder-blocks-tooltip example 4 1`] = `
 <button
+  aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -400,8 +400,8 @@ exports[`wonder-blocks-tooltip example 6 1`] = `
 >
   <button
     aria-describedby="uid-tooltip-6-aria-content"
+    aria-label=""
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -501,7 +501,6 @@ exports[`wonder-blocks-tooltip example 6 1`] = `
     aria-describedby="uid-tooltip-7-aria-content"
     aria-label="search"
     className=""
-    disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}

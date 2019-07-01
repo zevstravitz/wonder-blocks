@@ -4,7 +4,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:false disabled 
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -80,7 +79,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:false focused 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -157,7 +155,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:false hovered 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -234,7 +231,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:false pressed 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -311,7 +307,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:true disabled 1
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -387,7 +382,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:true focused 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -464,7 +458,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:true hovered 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -541,7 +534,6 @@ exports[`ButtonCore kind:primary color:default size:medium light:true pressed 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -618,7 +610,6 @@ exports[`ButtonCore kind:primary color:default size:small light:false disabled 1
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -694,7 +685,6 @@ exports[`ButtonCore kind:primary color:default size:small light:false focused 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -771,7 +761,6 @@ exports[`ButtonCore kind:primary color:default size:small light:false hovered 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -848,7 +837,6 @@ exports[`ButtonCore kind:primary color:default size:small light:false pressed 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -925,7 +913,6 @@ exports[`ButtonCore kind:primary color:default size:small light:true disabled 1`
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1001,7 +988,6 @@ exports[`ButtonCore kind:primary color:default size:small light:true focused 1`]
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1078,7 +1064,6 @@ exports[`ButtonCore kind:primary color:default size:small light:true hovered 1`]
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1155,7 +1140,6 @@ exports[`ButtonCore kind:primary color:default size:small light:true pressed 1`]
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1232,7 +1216,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:false disab
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1308,7 +1291,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:false focus
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1385,7 +1367,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:false hover
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1462,7 +1443,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:false press
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1539,7 +1519,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:true disabl
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1615,7 +1594,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:true focuse
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1692,7 +1670,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:true hovere
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1769,7 +1746,6 @@ exports[`ButtonCore kind:primary color:destructive size:medium light:true presse
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1846,7 +1822,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:false disabl
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1922,7 +1897,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:false focuse
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -1999,7 +1973,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:false hovere
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2076,7 +2049,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:false presse
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2153,7 +2125,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:true disable
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2229,7 +2200,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:true focused
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2306,7 +2276,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:true hovered
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2383,7 +2352,6 @@ exports[`ButtonCore kind:primary color:destructive size:small light:true pressed
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2460,7 +2428,6 @@ exports[`ButtonCore kind:primary size:medium spinner:true 1`] = `
 <button
   aria-label="loading"
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2590,7 +2557,6 @@ exports[`ButtonCore kind:primary size:small spinner:true 1`] = `
 <button
   aria-label="loading"
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2720,7 +2686,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:false disable
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2799,7 +2764,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:false focused
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2878,7 +2842,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:false hovered
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -2957,7 +2920,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:false pressed
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3036,7 +2998,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:true disabled
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3115,7 +3076,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:true focused 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3194,7 +3154,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:true hovered 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3273,7 +3232,6 @@ exports[`ButtonCore kind:secondary color:default size:medium light:true pressed 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3352,7 +3310,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:false disabled
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3431,7 +3388,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:false focused 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3510,7 +3466,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:false hovered 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3589,7 +3544,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:false pressed 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3668,7 +3622,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:true disabled 
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3747,7 +3700,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:true focused 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3826,7 +3778,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:true hovered 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3905,7 +3856,6 @@ exports[`ButtonCore kind:secondary color:default size:small light:true pressed 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -3984,7 +3934,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:false dis
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4063,7 +4012,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:false foc
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4142,7 +4090,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:false hov
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4221,7 +4168,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:false pre
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4300,7 +4246,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:true disa
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4379,7 +4324,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:true focu
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4458,7 +4402,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:true hove
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4537,7 +4480,6 @@ exports[`ButtonCore kind:secondary color:destructive size:medium light:true pres
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4616,7 +4558,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:false disa
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4695,7 +4636,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:false focu
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4774,7 +4714,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:false hove
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4853,7 +4792,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:false pres
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -4932,7 +4870,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:true disab
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5011,7 +4948,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:true focus
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5090,7 +5026,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:true hover
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5169,7 +5104,6 @@ exports[`ButtonCore kind:secondary color:destructive size:small light:true press
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5248,7 +5182,6 @@ exports[`ButtonCore kind:secondary size:medium spinner:true 1`] = `
 <button
   aria-label="loading"
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5381,7 +5314,6 @@ exports[`ButtonCore kind:secondary size:small spinner:true 1`] = `
 <button
   aria-label="loading"
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5514,7 +5446,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:false disabled
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5590,7 +5521,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:false focused 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5676,7 +5606,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:false hovered 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5762,7 +5691,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:false pressed 
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5848,7 +5776,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:true disabled 
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -5924,7 +5851,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:true focused 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6010,7 +5936,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:true hovered 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6096,7 +6021,6 @@ exports[`ButtonCore kind:tertiary color:default size:medium light:true pressed 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6182,7 +6106,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:false disabled 
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6258,7 +6181,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:false focused 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6344,7 +6266,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:false hovered 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6430,7 +6351,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:false pressed 1
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6516,7 +6436,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:true disabled 1
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6592,7 +6511,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:true focused 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6678,7 +6596,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:true hovered 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6764,7 +6681,6 @@ exports[`ButtonCore kind:tertiary color:default size:small light:true pressed 1`
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6850,7 +6766,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:false disa
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -6926,7 +6841,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:false focu
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7012,7 +6926,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:false hove
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7098,7 +7011,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:false pres
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7184,7 +7096,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:true disab
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7260,7 +7171,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:true focus
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7346,7 +7256,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:true hover
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7432,7 +7341,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:medium light:true press
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7518,7 +7426,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:false disab
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7594,7 +7501,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:false focus
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7680,7 +7586,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:false hover
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7766,7 +7671,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:false press
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7852,7 +7756,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:true disabl
 <button
   aria-label=""
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -7928,7 +7831,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:true focuse
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -8014,7 +7916,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:true hovere
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -8100,7 +8001,6 @@ exports[`ButtonCore kind:tertiary color:destructive size:small light:true presse
 <button
   aria-label=""
   className=""
-  disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -8186,7 +8086,6 @@ exports[`ButtonCore kind:tertiary size:medium spinner:true 1`] = `
 <button
   aria-label="loading"
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
@@ -8316,7 +8215,6 @@ exports[`ButtonCore kind:tertiary size:small spinner:true 1`] = `
 <button
   aria-label="loading"
   className=""
-  disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
   onDragStart={[Function]}
