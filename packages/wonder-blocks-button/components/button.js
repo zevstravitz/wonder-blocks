@@ -2,7 +2,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-import {getClickableBehavior} from "@khanacademy/wonder-blocks-core";
+import Clickable from "@khanacademy/wonder-blocks-clickable";
 import type {AriaProps, StyleType} from "@khanacademy/wonder-blocks-core";
 import type {IconAsset} from "@khanacademy/wonder-blocks-icon";
 import ButtonCore from "./button-core.js";
@@ -164,44 +164,40 @@ export default class Button extends React.Component<SharedProps> {
 
     render() {
         const {
-            onClick,
             href,
+            style,
+            onClick,
             children,
-            skipClientNav,
             spinner,
+            testId,
             disabled,
+            skipClientNav,
             ...sharedProps
         } = this.props;
 
-        const ClickableBehavior = getClickableBehavior(
-            href,
-            skipClientNav,
-            this.context.router,
-        );
-
         return (
-            <ClickableBehavior
-                disabled={spinner || disabled}
+            <Clickable
                 href={href}
-                onClick={onClick}
                 role="button"
+                style={style}
+                testId={testId}
+                onClick={onClick}
+                skipClientNav={skipClientNav}
+                disabled={spinner || disabled}
             >
-                {(state, handlers) => {
+                {(eventState) => {
                     return (
                         <ButtonCore
                             {...sharedProps}
-                            {...state}
-                            {...handlers}
+                            {...eventState}
                             disabled={disabled}
                             spinner={spinner}
-                            skipClientNav={skipClientNav}
-                            href={href}
                         >
                             {children}
                         </ButtonCore>
                     );
                 }}
-            </ClickableBehavior>
+            </Clickable>
         );
     }
 }

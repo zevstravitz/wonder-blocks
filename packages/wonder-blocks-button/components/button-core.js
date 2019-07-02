@@ -1,35 +1,24 @@
 // @flow
 import * as React from "react";
 import {StyleSheet} from "aphrodite";
-import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
-
 import {LabelLarge, LabelSmall} from "@khanacademy/wonder-blocks-typography";
 import Color, {
     SemanticColor,
     mix,
     fade,
 } from "@khanacademy/wonder-blocks-color";
-import {addStyle} from "@khanacademy/wonder-blocks-core";
+import {View} from "@khanacademy/wonder-blocks-core";
 import {CircularSpinner} from "@khanacademy/wonder-blocks-progress-spinner";
 import Icon from "@khanacademy/wonder-blocks-icon";
 import Spacing from "@khanacademy/wonder-blocks-spacing";
-
-import type {
-    ClickableHandlers,
-    ClickableState,
-} from "@khanacademy/wonder-blocks-core";
+import type {ClickableState} from "@khanacademy/wonder-blocks-core";
 import type {SharedProps} from "./button.js";
 
 type Props = {|
     ...SharedProps,
-    ...ClickableHandlers,
     ...ClickableState,
 |};
-
-const StyledAnchor = addStyle<"a">("a");
-const StyledButton = addStyle<"button">("button");
-const StyledLink = addStyle<typeof Link>(Link);
 
 export default class ButtonCore extends React.Component<Props> {
     static contextTypes = {router: PropTypes.any};
@@ -37,23 +26,18 @@ export default class ButtonCore extends React.Component<Props> {
     render() {
         const {
             children,
-            skipClientNav,
             color,
             disabled: disabledProp,
             focused,
             hovered,
-            href,
             kind,
             light,
             pressed,
             size,
             style,
-            testId,
             spinner,
             icon,
-            ...handlers
         } = this.props;
-        const {router} = this.context;
 
         const buttonColor =
             color === "destructive"
@@ -83,12 +67,12 @@ export default class ButtonCore extends React.Component<Props> {
             size === "small" && sharedStyles.small,
         ];
 
-        const commonProps = {
-            "data-test-id": testId,
-            role: "button",
-            style: [defaultStyle, style],
-            ...handlers,
-        };
+        // const commonProps = {
+        //     "data-test-id": testId,
+        //     role: "button",
+        //     style: [defaultStyle, style],
+        //     ...handlers,
+        // };
 
         const Label = size === "small" ? LabelSmall : LabelLarge;
 
@@ -121,7 +105,9 @@ export default class ButtonCore extends React.Component<Props> {
             </React.Fragment>
         );
 
-        if (href && !disabled) {
+        return <View style={[defaultStyle, style]}>{contents}</View>;
+
+        /* if (href && !disabled) {
             return router && !skipClientNav ? (
                 <StyledLink {...commonProps} to={href}>
                     {contents}
@@ -141,7 +127,7 @@ export default class ButtonCore extends React.Component<Props> {
                     {contents}
                 </StyledButton>
             );
-        }
+        } */
     }
 }
 
