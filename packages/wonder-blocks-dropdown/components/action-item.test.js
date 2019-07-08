@@ -15,9 +15,10 @@ describe("ActionItem", () => {
         expect(actionItem).toMatchSnapshot();
     });
 
-    it("should render an anchor if there's no router", () => {
+    it.only("should render an anchor if there's no router", () => {
         const wrapper = shallow(<ActionItem href="/foo" />);
-
+        // eslint-disable-next-line no-console
+        console.log(wrapper.debug());
         expect(
             wrapper
                 // call the props.children(state, handlers) with empty objects for both params

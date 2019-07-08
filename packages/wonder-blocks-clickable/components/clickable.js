@@ -74,7 +74,8 @@ export default class Clickable extends React.Component<Props> {
     getCorrectTag = (clickableState: ClickableState, commonProps: mixed) => {
         const activeHref = this.props.href && !this.props.disabled;
         const useClient = this.context.router && !this.props.skipClientNav;
-
+        // eslint-disable-next-line no-console
+        console.log("TAG, ", activeHref, useClient);
         if (activeHref && useClient) {
             return (
                 <StyledLink

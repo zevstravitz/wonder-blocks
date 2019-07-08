@@ -1,14 +1,13 @@
 // @flow
 
 import * as React from "react";
-import {StyleSheet} from "aphrodite";
-import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
-
-import Color, {mix, fade} from "@khanacademy/wonder-blocks-color";
+import {StyleSheet} from "aphrodite";
+import {View} from "@khanacademy/wonder-blocks-core";
 import Spacing from "@khanacademy/wonder-blocks-spacing";
+import Clickable from "@khanacademy/wonder-blocks-clickable";
+import Color, {mix, fade} from "@khanacademy/wonder-blocks-color";
 import {LabelMedium} from "@khanacademy/wonder-blocks-typography";
-import {addStyle, getClickableBehavior} from "@khanacademy/wonder-blocks-core";
 
 const {blue, white, offBlack, offBlack32} = Color;
 
@@ -77,10 +76,6 @@ type ActionProps = {|
     role: "menuitem" | "option",
 |};
 
-const StyledAnchor = addStyle("a");
-const StyledButton = addStyle("button");
-const StyledLink = addStyle(Link);
-
 /**
  * The action item trigger actions, such as navigating to a different page or
  * opening a modal. Supply the href and/or onClick props. Used as a child of
@@ -110,15 +105,40 @@ export default class ActionItem extends React.Component<ActionProps> {
             role,
             testId,
         } = this.props;
-        const {router} = this.context;
-
-        const ClickableBehavior = getClickableBehavior(
-            href,
-            skipClientNav,
-            router,
-        );
 
         return (
+            <Clickable
+                href={href}
+                role={role}
+                testId={testId}
+                onClick={onClick}
+                disabled={disabled}
+                skipClientNav={skipClientNav}
+            >
+                {(eventState) => (
+                    <View
+                        style={[
+                            styles.shared,
+                            disabled && styles.disabled,
+                            !disabled &&
+                                (eventState.pressed
+                                    ? styles.active
+                                    : (eventState.hovered ||
+                                          eventState.focused) &&
+                                      styles.focus),
+                        ]}
+                    >
+                        <LabelMedium
+                            style={[indent && styles.indent, styles.label]}
+                        >
+                            {label}
+                        </LabelMedium>
+                    </View>
+                )}
+            </Clickable>
+        );
+
+        /* return (
             <ClickableBehavior
                 disabled={disabled}
                 onClick={onClick}
@@ -178,7 +198,7 @@ export default class ActionItem extends React.Component<ActionProps> {
                     }
                 }}
             </ClickableBehavior>
-        );
+        ); */
     }
 }
 
