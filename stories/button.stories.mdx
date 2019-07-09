@@ -1,0 +1,24 @@
+import { action } from '@storybook/addon-actions';
+import { Preview, Props, Source, Story, Meta } from '@storybook/addon-docs/blocks';
+
+import Button from '@khanacademy/wonder-blocks-button';
+
+<Meta title='components|Button' />
+
+# Button
+
+Reusable button component.
+
+Consisting of a ClickableBehavior surrounding a ButtonCore. ClickableBehavior handles interactions and state changes. ButtonCore is a stateless component which displays the different states the Button can take.
+
+Example usage:
+
+<Preview>
+    <Story name="using MDX">
+        <Button onClick={action('clicked')}>Button using MDX</Button>
+    </Story>
+</Preview>
+
+<Props of="Button" />
+
+<Source id="." />

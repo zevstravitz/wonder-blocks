@@ -1,0 +1,142 @@
+import { action } from '@storybook/addon-actions'; import { Preview, Props,
+Source, Story, Meta } from '@storybook/addon-docs/blocks';
+
+import {Title} from "@khanacademy/wonder-blocks-typography";
+import {View} from "@khanacademy/wonder-blocks-core";
+import Button from "@khanacademy/wonder-blocks-button";
+import {Strut} from "@khanacademy/wonder-blocks-layout";
+import Spacing from "@khanacademy/wonder-blocks-spacing";
+
+import {ModalLauncher, OnePaneDialog} from '@khanacademy/wonder-blocks-modal';
+
+<Meta title='components|Modal' />
+
+# Modal
+
+Looking for docs for StandardModal, OneColumnModal, or TwoColumnModal click
+[here](https://deploy-preview-389--wonder-blocks.netlify.com/#modal)
+
+## Accessibility
+
+It should follow guidelines from
+[W3C](https://www.w3.org/TR/wai-aria-practices/#dialog_modal).
+
+### Keyboard Interaction
+
+When a dialog opens, focus moves to an element inside the dialog. See notes
+below regarding initial focus placement.
+
+- Tab:
+    - Moves focus to the next tabbable element inside the dialog. - If focus is
+    on the last tabbable element inside the dialog, moves focus to the first
+    tabbable element inside the dialog.
+- Shift + Tab:
+    - Moves focus to the previous tabbable element inside the dialog. - If focus
+    is on the first tabbable element inside the dialog, moves focus to the last
+    tabbable element inside the dialog.
+- Escape: Closes the dialog.
+
+#### Initial focus placement: The initial focus placement depends on the
+following scenarios:
+
+1. `initialFocusId` (default): `ModalLauncher` exposes this prop as a string.
+The dialog will try to find this element into the DOM. If it's found, focus is
+initially set on this element. 2. focusable elements: This is the second
+scenario, where the dialog tries to find the first ocurrence of possible
+focusable elements. 3. Dialog: If the first two conditions are not met, then
+focus is initially set to the Dialog element itself.
+
+### Example: Set initial focus on a given element inside the modal
+
+<Preview>
+    <Story name="with initial focus">
+        <ModalLauncher
+            onClose={() => window.alert("you closed the modal")}
+            initialFocusId="initial-focus"
+            modal={({closeModal}) => (
+                <OnePaneDialog
+                    title="Single-line title"
+                    content={
+                        <View>
+                            <View>
+                                <label>Label</label>
+                                <input type="text" />
+                                <Strut size={Spacing.medium} />
+                                <Button id="initial-focus">
+                                    Button to receive initial focus
+                                </Button>
+                            </View>
+                        </View>
+                    }
+                    footer={
+                        <React.Fragment>
+                            <Button kind="tertiary" onClick={closeModal}>
+                                Cancel
+                            </Button>
+                            <Strut size={Spacing.medium} />
+                            <Button>
+                                Submit
+                            </Button>
+                        </React.Fragment>
+                    }
+                />
+            )}
+        >
+            {({openModal}) => <Button onClick={openModal}>Open modal with initial focus</Button>}
+        </ModalLauncher>
+    </Story>
+</Preview>
+
+### WAI-ARIA Roles
+- The element that serves as the **dialog container** has `aria-role` defined as
+`dialog`. - The dialog has a value set for the `aria-labelledby` property that
+refers to a **visible dialog title**.
+
+## Customization
+
+### Example: Flexible dialogs
+
+This example illustrates how we can easily update the Modal's contents by
+wrapping it into a new component/container. **Modal** is built in a way that
+provides great flexibility and makes it work with different variations and/or
+layouts (see Custom Two-Pane Dialog example).
+
+<Preview>
+    <Story name="flexible dialogs">
+        <ModalLauncher
+            modal={({closeModal}) => (
+                <OnePaneDialog
+                    title="Title"
+                    subtitle="You're reading the subtitle!"
+                    content={
+                        <View>
+                            <Body tag="p">
+                                {
+                                    `Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat. Duis aute irure
+                                    dolor in reprehenderit in voluptate velit
+                                    esse cillum dolore eu fugiat nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est.`
+                                }
+                            </Body>
+                        </View>
+                    }
+                    footer={
+                        <Button onClick={closeModal}>Close modal</Button>
+                    }
+                />
+            )}
+        >
+            {({openModal}) => (
+                <Button onClick={openModal}>OnePaneDialog</Button>
+            )}
+        </ModalLauncher>
+    </Story>
+</Preview>
+

@@ -1,0 +1,57 @@
+import { action } from '@storybook/addon-actions'; import { Preview, Props,
+Source, Story, Meta } from '@storybook/addon-docs/blocks';
+
+import {Title} from "@khanacademy/wonder-blocks-typography";
+import {View} from "@khanacademy/wonder-blocks-core";
+import Button from "@khanacademy/wonder-blocks-button";
+import {Strut} from "@khanacademy/wonder-blocks-layout";
+import Spacing from "@khanacademy/wonder-blocks-spacing";
+
+import {ModalLauncher, OnePaneDialog} from '@khanacademy/wonder-blocks-modal';
+
+<Meta title='components|Modal/ModalLauncher' />
+
+# ModalLauncher
+
+Once the modal is launched, tab focus wraps inside the modal content. Pressing
+Tab at the end of the modal will focus the modal's first element, and pressing
+`Shift-Tab` at the start of the modal will focus the modal's last element.
+
+<Preview>
+    <Story name="with initial focus">
+        <ModalLauncher
+            onClose={() => window.alert("you closed the modal")}
+            initialFocusId="initial-focus"
+            modal={({closeModal}) => (
+                <OnePaneDialog
+                    title="Single-line title"
+                    content={
+                        <View>
+                            <View>
+                                <label>Label</label>
+                                <input type="text" />
+                                <Strut size={Spacing.medium} />
+                                <Button id="initial-focus">
+                                    Button to receive initial focus
+                                </Button>
+                            </View>
+                        </View>
+                    }
+                    footer={
+                        <React.Fragment>
+                            <Button kind="tertiary" onClick={closeModal}>
+                                Cancel
+                            </Button>
+                            <Strut size={Spacing.medium} />
+                            <Button>
+                                Submit
+                            </Button>
+                        </React.Fragment>
+                    }
+                />
+            )}
+        >
+            {({openModal}) => <Button onClick={openModal}>Open modal with initial focus</Button>}
+        </ModalLauncher>
+    </Story>
+</Preview>
