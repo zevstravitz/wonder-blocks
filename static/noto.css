@@ -45,14 +45,14 @@
 @font-face {
     font-family: "Noto Sans";
     font-weight: 700;
-    src: url("fonts/armenian//NotoSansArmenian-Bold.woff2");
+    src: url("fonts/armenian/NotoSansArmenian-Bold.woff2");
     unicode-range: U+0530–U+058F;
 }
 
 @font-face {
     font-family: "Noto Sans";
     font-weight: 900;
-    src: url("fonts/armenian//NotoSansArmenian-Black.woff2");
+    src: url("fonts/armenian/NotoSansArmenian-Black.woff2");
     unicode-range: U+0530–U+058F;
 }
 
