@@ -13,10 +13,11 @@ import {keyCodes} from "../util/constants.js";
 type Props = {|
     selectionType?: "single" | "multi",
     opened?: boolean,
+    onChange?: (selectedItems: Array<string> | string) => mixed,
     onToggle?: (opened: boolean) => mixed,
 |};
 type State = {|
-    selectedValues: Array<string>,
+    selectedValues: Array<string> | string,
     opened?: boolean,
 |};
 
@@ -168,10 +169,15 @@ describe("Dropdown", () => {
                 opened: this.props.opened,
             };
 
-            handleChange = (update) =>
+            handleChange = (update) => {
                 this.setState({
                     selectedValues: update,
                 });
+
+                if (this.props.onChange) {
+                    this.props.onChange(update);
+                }
+            };
 
             handleToggleMenu = (opened) => {
                 this.setState({
@@ -283,6 +289,32 @@ describe("Dropdown", () => {
 
             // Assert
             expect(controlledComponent.state("selectedValues")).toHaveLength(1);
+        });
+
+        it("only passes a single value to onChange if singleSelectOption is passed", () => {
+            // Arrange
+            const onChangeMock = jest.fn();
+
+            const controlledComponent = mount(
+                <ControlledComponent
+                    selectionType={"single"}
+                    onChange={onChangeMock}
+                />,
+            );
+
+            controlledComponent.simulate("click");
+            controlledComponent.setState({selectedValues: "B"});
+            const dropdownCore = controlledComponent.find(DropdownCore);
+
+            // Act
+            dropdownCore.simulate("keydown", {keyCode: keyCodes.down});
+            dropdownCore.simulate("keyup", {keyCode: keyCodes.down});
+            // select first item
+            const optionItem = controlledComponent.find(OptionItem).at(0);
+            optionItem.simulate("click");
+
+            // Assert
+            expect(onChangeMock).toHaveBeenCalledWith("A");
         });
 
         it("closes Dropdown if an OptionItem is selected when singleSelectOption is passed", () => {

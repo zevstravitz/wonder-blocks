@@ -52,13 +52,13 @@ type Props = {|
      * A callback that returns items that are newly selected. Use only if this
      * menu contains select items (and make sure selectedValues is defined).
      */
-    onChange?: (selectedItems: Array<string>) => mixed,
+    onChange?: (selectedItems: Array<string> | string) => mixed,
 
     /**
      * The values of the items that are currently selected. Use only if this
      * menu contains select items (and make sure onChange is defined).
      */
-    selectedValues?: Array<string>,
+    selectedValues?: Array<string> | string,
 
     /**
      * Whether this menu should be left-aligned or right-aligned with the
@@ -152,18 +152,21 @@ export default class Dropdown extends React.Component<Props, State> {
             return;
         }
 
-        if (selectedValues.includes(selectedValue)) {
+        if (
+            Array.isArray(selectedValues) &&
+            selectedValues.includes(selectedValue)
+        ) {
             const index = selectedValues.indexOf(selectedValue);
             const updatedSelection = [
                 ...selectedValues.slice(0, index),
                 ...selectedValues.slice(index + 1),
             ];
-            onChange(singleSelect ? [selectedValue] : updatedSelection);
+            onChange(updatedSelection);
         } else {
-            // Item was newly selected
+            // Item was newly selected or is singleSelect
             onChange(
                 singleSelect
-                    ? [selectedValue]
+                    ? selectedValue
                     : [...selectedValues, selectedValue],
             );
         }

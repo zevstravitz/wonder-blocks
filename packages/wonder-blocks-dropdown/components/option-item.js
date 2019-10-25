@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 import Color, {mix, fade} from "@khanacademy/wonder-blocks-color";
 import Spacing from "@khanacademy/wonder-blocks-spacing";
-import {LabelLarge} from "@khanacademy/wonder-blocks-typography";
+import {LabelMedium} from "@khanacademy/wonder-blocks-typography";
 import {View, getClickableBehavior} from "@khanacademy/wonder-blocks-core";
 
 import type {StyleType} from "@khanacademy/wonder-blocks-core";
@@ -148,9 +148,9 @@ export default class OptionItem extends React.Component<OptionProps> {
                                 selected={selected}
                                 {...state}
                             />
-                            <LabelLarge style={styles.label}>
+                            <LabelMedium style={styles.label}>
                                 {label}
-                            </LabelLarge>
+                            </LabelMedium>
                         </View>
                     );
                 }}

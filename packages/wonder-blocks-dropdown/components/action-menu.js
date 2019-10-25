@@ -35,13 +35,13 @@ type Props = {|
      * A callback that returns items that are newly selected. Use only if this
      * menu contains select items (and make sure selectedValues is defined).
      */
-    onChange?: (selectedItems: Array<string>) => mixed,
+    onChange?: (selectedItems: Array<string> | string) => mixed,
 
     /**
      * The values of the items that are currently selected. Use only if this
      * menu contains select items (and make sure onChange is defined).
      */
-    selectedValues?: Array<string>,
+    selectedValues?: Array<string> | string,
 
     /**
      * Whether this menu should be left-aligned or right-aligned with the

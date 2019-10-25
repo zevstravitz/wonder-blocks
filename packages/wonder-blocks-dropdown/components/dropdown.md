@@ -310,3 +310,84 @@ class ControlledDropdownExample extends React.Component {
 
 <ControlledDropdownExample />
 ```
+
+### Selecting a single value in Dropdown
+
+This example shows how to use single values when the `selectionType` is set to
+"single". For this scenario, make sure that `selectedValues` is a `string` and
+the `onChange` callback passes a `string` in its argument as well. Doing this
+facilitates the extraction of the currently selected value for these type of
+dropdowns.
+
+```js
+import {Dropdown, ActionItem, OptionItem, SeparatorItem} from "@khanacademy/wonder-blocks-dropdown";
+import {View} from "@khanacademy/wonder-blocks-core";
+import {HeadingSmall} from "@khanacademy/wonder-blocks-typography";
+import {StyleSheet} from "aphrodite";
+
+const styles = StyleSheet.create({
+    focused: {
+        border: "none",
+    },
+    hovered: {
+        textDecoration: "underline",
+    },
+    cursor: {
+        cursor: "pointer",
+        outline: "none",
+    }
+});
+
+class SingleDropdownExample extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            selectedValues: "kumail",
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(update) {
+        console.log("singleItem selected:", update);
+        this.setState({
+            selectedValues: update,
+        });
+    }
+
+    render() {
+        const dropdownItems = [
+            <OptionItem label="Alex" value="alex" />,
+            <OptionItem label="Cathy" value="cathy" />,
+            <OptionItem label="Kumail" value="kumail" />,
+            <OptionItem label="Salman" value="salman" />,
+            <OptionItem label="Yan" value="yan" />,
+            <OptionItem label="Yash" value="yash" />,
+        ];
+
+        return (
+            <Dropdown
+                selectionType={"single"}
+                menuItems={dropdownItems}
+                onChange={this.handleChange}
+                selectedValues={this.state.selectedValues}
+            >
+                {(eventState) => (
+                    <HeadingSmall
+                        style={[
+                            styles.cursor,
+                            eventState.focused && styles.focused,
+                            eventState.hovered && styles.hovered,
+                        ]}
+                    >
+                        Select one student
+                    </HeadingSmall>
+                )}
+            </Dropdown>
+        );
+    }
+}
+
+<View>
+    <SingleDropdownExample />
+</View>
+```
