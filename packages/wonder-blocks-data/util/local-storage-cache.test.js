@@ -1,5 +1,5 @@
 // @flow
-import LocalStorageCache from "./local-storage-cache.js";
+//import LocalStorageCache from "./local-storage-cache.js";
 
 describe("LocalStorageCache", () => {
     describe("#constructor", () => {
